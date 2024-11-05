@@ -19,4 +19,13 @@
     <string name="dont_have_account_text">"Don't have account? "</string>
     <string name="full_name_text">Nguyen Van A</string>
     <string name="already_registerd_text">"Already Registered? "</string>
+    <string name="menu_daily_meal">Daily Meal</string>
+    <string name="menu_favourite">Favourite</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_my_cart">My Cart</string>
+    <string name="logout">Logout</string>
+    <string name="search_food_text">Search your food!</string>
+    <string name="what_do_you_want">What do you want?</string>
+    <string name="hello_text">Hello</string>
 </resources>

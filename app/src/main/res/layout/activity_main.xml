@@ -21,5 +21,20 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer"
+        android:background="@color/gray"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/logout"
+            android:paddingVertical="14dp" />
+    </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

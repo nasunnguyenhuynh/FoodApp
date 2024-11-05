@@ -58,7 +58,7 @@
         app:layout_constraintWidth_percent=".8"
         />
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editText7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/password_text"
@@ -81,10 +81,11 @@
         android:text="@string/login_text"
         android:textAllCaps="false"
         android:textStyle="bold"
+        android:onClick="mainActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editText7"
         app:layout_constraintVertical_bias=".7"
         app:layout_constraintWidth_percent=".8" />
 
