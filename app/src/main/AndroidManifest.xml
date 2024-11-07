@@ -22,13 +22,13 @@
         </intent-filter>
     </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activites.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activites.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".activites.WelcomeActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.DemoFoodApp.NoActionBar" />
