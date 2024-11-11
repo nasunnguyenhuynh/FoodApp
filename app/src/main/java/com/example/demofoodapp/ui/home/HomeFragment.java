@@ -15,17 +15,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.demofoodapp.R;
 import com.example.demofoodapp.adapters.HomeHorAdapter;
 import com.example.demofoodapp.adapters.HomeVerAdapter;
+import com.example.demofoodapp.adapters.UpdateVerticalRec;
 import com.example.demofoodapp.models.HomeHorModel;
 import com.example.demofoodapp.models.HomeVerModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements UpdateVerticalRec {
 
     RecyclerView homeHorizontalRec, homeVerticalRec;
-    List<HomeHorModel> homeHorModelList;
-    List<HomeVerModel> homeVerModelList;
+    ArrayList<HomeHorModel> homeHorModelList;
+    ArrayList<HomeVerModel> homeVerModelList;
 
     HomeHorAdapter homeHorAdapter;
     HomeVerAdapter homeVerAdapter;
@@ -43,7 +44,7 @@ public class HomeFragment extends Fragment {
         homeHorModelList.add(new HomeHorModel(R.drawable.fried_potatoes, "Fries"));
         homeHorModelList.add(new HomeHorModel(R.drawable.sandwich, "Sandwich"));
 
-        homeHorAdapter = new HomeHorAdapter(getActivity(), homeHorModelList);
+        homeHorAdapter = new HomeHorAdapter(this, getActivity(), homeHorModelList);
         homeHorizontalRec.setAdapter(homeHorAdapter);
         homeHorizontalRec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         homeHorizontalRec.setHasFixedSize(true);
@@ -51,9 +52,9 @@ public class HomeFragment extends Fragment {
 
 
         homeVerModelList = new ArrayList<>();
-        homeVerModelList.add(new HomeVerModel(R.drawable.pizza1, "Pizza", "10:00 - 23:00", "4.9", "Min - $34"));
-        homeVerModelList.add(new HomeVerModel(R.drawable.pizza2, "Pizza", "10:00 - 23:00", "4.9", "Min - $34"));
-        homeVerModelList.add(new HomeVerModel(R.drawable.pizza3, "Pizza", "10:00 - 23:00", "4.9", "Min - $34"));
+        homeVerModelList.add(new HomeVerModel(R.drawable.pizza1, "Pizza1", "10:00 - 23:00", "4.9", "Min - $34"));
+        homeVerModelList.add(new HomeVerModel(R.drawable.pizza2, "Pizza2", "10:00 - 23:00", "4.9", "Min - $34"));
+        homeVerModelList.add(new HomeVerModel(R.drawable.pizza3, "Pizza3", "10:00 - 23:00", "4.9", "Min - $34"));
 
         homeVerAdapter = new HomeVerAdapter(getActivity(), homeVerModelList);
         homeVerticalRec.setAdapter(homeVerAdapter);
@@ -61,5 +62,12 @@ public class HomeFragment extends Fragment {
         homeVerticalRec.setHasFixedSize(true);
         homeVerticalRec.setNestedScrollingEnabled(false);
         return root;
+    }
+
+    @Override
+    public void callBack(int position, ArrayList<HomeVerModel> list) {
+        homeVerAdapter = new HomeVerAdapter(getContext(), list);
+        homeVerAdapter.notifyDataSetChanged();
+        homeVerticalRec.setAdapter(homeVerAdapter);
     }
 }

@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:text="@string/pizza"
+            android:layout_gravity="center"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:fontFamily="@font/amita"/>
