@@ -46,4 +46,8 @@
     <string name="third_fragment">Third Fragment</string>
     <string name="description_here">Description Here</string>
     <string name="food_name">Food Name</string>
+    <string name="my_cart">My Cart</string>
+    <string name="total">Total</string>
+    <string name="_180">$180</string>
+    <string name="make_order">Make order</string>
 </resources>
